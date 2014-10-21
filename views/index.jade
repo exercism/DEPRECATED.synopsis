@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title exercism tracks
+
+  body
+    table
+      tr
+        each track in tracks
+          td(valign='top')
+            table
+              tr
+                th= track.language
+              each problem in track.problems
+                tr
+                  td(style='white-space: nowrap')
+                    - var name = problem.split('/').pop()
+                    a(href='https://github.com/exercism/x-common/blob/master/' + name + '.md')
+                        = name
