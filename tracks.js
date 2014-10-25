@@ -4,6 +4,7 @@ var request = require('request');
 
 var app = express();
 
+app.set('port', (process.env.PORT || 3000))
 app.set('views', './views');
 app.set('view engine', 'jade');
 
@@ -18,6 +19,6 @@ app.get('/', function(req, res) {
     });
 });
 
-app.listen(3000, function() {
+app.listen(app.get('port'), function() {
     console.log('Starting exercism tracks app on port 3000...');
 });
