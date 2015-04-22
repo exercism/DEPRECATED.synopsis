@@ -10,7 +10,9 @@ html
           td(valign='top')
             table
               tr
-                th= track.language
+                th
+                  a(href=track.repository)
+                    = track.language
               each problem in track.problems
                 tr
                   td(style='white-space: nowrap')
