@@ -17,7 +17,7 @@ html
                 tr
                   td(style='white-space: nowrap')
                     - var name = problem.split('/').pop()
-                    a(href='https://github.com/exercism/x-common/blob/master/' + name + '.md')
+                    a(href=track.repository + '/tree/master/'+ name)
                         = name
     hr
     img(src='http://exercism.io/img/logo.png' style='margin-right: 20px' width='120')
